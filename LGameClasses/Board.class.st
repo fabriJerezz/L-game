@@ -1,11 +1,25 @@
 Class {
 	#name : #Board,
-	#superclass : #Object,
+	#superclass : #SimpleSwitchMorph,
 	#instVars : [
-		'grid'
+		'mouseAction'
 	],
 	#category : #LGameClasses
 }
+
+{ #category : #initialization }
+Board >> initialize [
+	""""" Metodo para inicializar "
+	
+super initialize.
+self label: ''.
+self borderWidth: 2.
+bounds := 0 @ 0 corner: 16 @ 16.
+offColor := Color paleYellow.
+onColor := Color paleBlue darker.
+self useSquareCorners.
+self turnOff
+]
 
 { #category : #abstract }
 Board >> isValidMove [

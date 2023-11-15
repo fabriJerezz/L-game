@@ -1,11 +1,6 @@
 Class {
 	#name : #Game,
-	#superclass : #Object,
-	#instVars : [
-		'players',
-		'currentPlayerIndex',
-		'board'
-	],
+	#superclass : #BorderedMorph,
 	#category : #LGameClasses
 }
 
